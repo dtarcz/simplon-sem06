@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>formulaires</title>
+    <link rel="stylesheet" href="assets/css/master.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body>
+    <p>
+      tests sur les formulaires
+    </p>
+    <p>
+      <input type="text" name="name" id="text" size="30" value="Vous n'avez pas le focus !">
+    </p>
+    <p>
+      <textarea onclick="alert(this.value);">Et voilà du texte !</textarea>
+    </p>
+    <p>
+      <input id="button" type="button" name="name" value="Je suis ton bouton !" onclick="desactiver();">
+    </p>
+    <h2>cas du checked</h2>
+    <p>
+      <label><input type="radio" name="check" value="1" /> Case n°1</label><br />
+      <label><input type="radio" name="check" value="2" /> Case n°2</label><br />
+      <label><input type="radio" name="check" value="3" /> Case n°3</label><br />
+      <label><input type="radio" name="check" value="4" /> Case n°4</label>
+      <br /><br />
+      <input type="button" value="Afficher la case cochée" onclick="check();" />
+    </p>
+    <h2>Cas des listes déroulantes&nbsp;:</h2>
+    <p>
+      <select id="liste">
+        <option>Sélectionnez votre sexe&nbsp;:</option>
+        <option>Homme</option>
+        <option>Femme</option>
+      </select>
+    </p>
+    <p>
+      <select id="list" onchange="alert(this.options[this.selectedIndex].value);">
+        <option value="O">Sélectionner votre Pays</option>
+        <option value="Fr">France</option>
+        <option value="Es">Espagne</option>
+        <option value="Be">Belgique</option>
+      </select>
+    </p>
+    <h2>Le cas des Méthodes et des évènements <strong>submit</strong> et <strong>reset</strong></h2>
+    <p>
+      <form id="monForm">
+        <input type="text" value="Entrez un texte..."><br>
+        <input type="submit" value="Submit !">
+        <input type="reset" value="Reset !">
+      </form>
+    </p>
+  </body>
+
+<script src="assets/js/tests-formulaires.js" charset="utf-8"></script>
+</html>

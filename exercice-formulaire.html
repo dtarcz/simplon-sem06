@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exercice Formulaire</title>
+    <link rel="stylesheet" href="assets/css/master.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body>
+    <h1>Exercice Formulaire</h1>
+    <p>
+      Voici l'exercice selon <a href="http://simplonline.co/voir-les-consignes/41-consignes-narbonne/248-formulaire-d-inscription">les consignes ici</a>.
+    </p>
+    <div class="exercice">
+
+        <fieldset>
+          <legend>Inscription</legend>
+          <h2 class="exercice">Inscription</h2>
+          <form id="exercice" action="#" method="post">
+
+              <label for="login">Login :</label>
+              <input type="text" id="login" name="login" placeholder="Saisissez votre login..." autofocus="autofocus" required="required"><br>
+
+              <label for="nom">Nom :</label>
+              <input type="text" id="nom" name="nom" placeholder="Saisissez votre nom..." ><br>
+
+              <label for="prenom">Prénom :</label>
+              <input type="text" id="prenom" name="prenom" placeholder="Saisissez votre prénom..."><br>
+
+              <label for="email">Adresse mail :</label>
+              <input type="email" id="mail" name="mail" placeholder="votremail@fournisseur.com" required="required"><br>
+
+              <label for="site">Site web :</label>
+              <input type="url" id="site" name="site" placeholder="http://votresite.com" ><br>
+
+              <label for="mdpasse1">Mot de passe :</label>
+              <input type="password" id="mdpasse1" name="mdpasse1" required pattern="[A-Za-z]{6}" title="Au moins 6 caractères"><br>
+
+              <label for="mdpasse2">Confirmation mot de passe :</label>
+              <input type="password" id="mdpasse2" name="mdpasse2" required="required"><br>
+
+              <input type="checkbox" name="contrat" value="contrat" id="contrat" required >J'accepte les termes du contrat utilisateur.<br>
+
+              <input type="submit" name="name" value="Valider l'inscription" ><br>
+        </fieldset>
+
+
+      </form>
+    </div>
+
+<script src="assets/js/exercice-formulaire.js" charset="utf-8"></script>
+  </body>
+</html>
