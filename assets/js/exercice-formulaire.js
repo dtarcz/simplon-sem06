@@ -1,38 +1,24 @@
-// faire correspondre les deux mots de passe :
-var mdpasse1 = document.getElementById('mdpasse1');
-var mdpasse2 = document.getElementById('mdpasse2');
+function verifSaisie() {
+  // méthode 1 (à l'ancienne)
+  /*
+  if (document.getElementById('login').value == "") {
+    alert('Le champ login n'est pas rempli);
+  }
+  */
 
-var checkMdpasseValidity = function() {
-    if (mdpasse1.value != mdpasse2.value) {
-        mdpasse1.setCustomValidity('Les mots de passes doivent être identiques.');
-    } else {
-        mdpasse1.setCustomValidity('');
-    }
-};
+  // LE MESSAGE :
+  var strMessage = "Merci de bien vouloir : \n\n";
+  // méthode HTML5
 
-mdpasse1.addEventListener('change', checkMdpasseValidity, false);
-mdpasse2.addEventListener('change', checkMdpasseValidity, false);
+  var login = document.getElementById('login').checkValidity();
+  var mail = document.getElementById('mail').checkValidity();
 
-// ESSAI d'obliger la coche de la checkbox :
-var acceptation = document.getElementById("contrat").required;
-if (acceptation == false) {
-    alert('Merci de bien vouloir accepter les termes du contrat.');
+  if (login == false) {
+    strMessage = strMessage + "-définir un login,\n\n";
+  }
+  if (mail == false) {
+    strMessage = strMessage + "-renseigner votre adresse email,\n\n";
   }
 
-// afficher les messages :
-/*
-* S'il y a une erreur au moment de la validation, afficher un message "alert" en précisant quels champs ne sont pas valides.
-* Si tout est saisi correctement, afficher "Formulaire validé !"
-*/
-var exercice = document.getElementById('exercice');
-
-exercice.getElementById('login') {
-  if (document.getElementById('login').required == false) {
-    console.log('Merci de bien vouloir renseigner votre login.');
-  }
-}, true)
-
-exercice.addEventListener('submit', function(e) {
-  alert('Formulaire validé !\n\nVous avez envoyé le formulaire !\n\nMais celui-ci a été bloqué pour que vous ne changiez pas de page.');
-  e.preventDefault();
-}, true)
+    alert(strMessage);
+}
